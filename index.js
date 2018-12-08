@@ -27,6 +27,9 @@ app.get("/:name/:surname", function(req, res){
  app.get("/google", function(req,res){
      res.redirect('http://google.com');
  })
+ app.get("/*", function(req,res){
+    res.send("<h1>Error 404</h1");
+})
 
 app.listen(3000,function(){
     console.log("Example is running on port 3000");
